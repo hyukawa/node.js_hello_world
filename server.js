@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-const http = require('http');
-const PORT = 3000;
+const HTTP = require('http');
+const PORT = process.env.PORT || 3001;
 
-http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain;charset=utf-8'});
-    res.end('こんにちは');
+HTTP.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello Node.js\n');
 }).listen(PORT);
